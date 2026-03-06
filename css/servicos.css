@@ -1,0 +1,280 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    background: #111;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 120px;
+    border-radius: 12px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: #25D366;
+}
+
+/*banner*/
+.banner {
+    background: black;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    width: 100%;
+}
+.banner img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 25px;
+}
+.text-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: gray;
+}
+.text-banner h2{
+    color: #fff;
+}
+.banner a{
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #0f9d58;
+    padding: 5px;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+/* SERVIÇOS */
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #25D366, #0f9d58);
+    border-radius: 18px 18px 0 0;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card strong {
+    font-size: 1.6rem;
+    color: #0f9d58;
+    align-self: flex-end;
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: .2s;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+}
+
+.item i {
+    font-size: 2rem;
+    color: #25D366;
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 50px;
+    background: #111;
+    color: #fff;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+footer h3,
+footer h4 {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social a {
+    color: #25D366;
+    font-size: 1.4rem;
+}
+
+.direitos {
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    color: #888;
+}
+
+.direitos a {
+    color: #25D366;
+    text-decoration: none;
+}
+
+/* BOTÃO WHATSAPP */
+
+.btn-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    font-size: 22px;
+    padding: 12px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .banner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .banner img{
+        object-fit: cover;
+        max-width: 220px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+}
